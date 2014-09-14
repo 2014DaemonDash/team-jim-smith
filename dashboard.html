@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta property="og:title" content="" />
+        <meta property="og:description" content="Just got 132 sustainability points..here I come Chipotle!" />
+        <meta property="og:site_name" content="UXchange">
+        <meta name="description" content="My Parse App">
+        <meta name="viewport" content="width=device-width">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.3.0.min.js"></script>
+        <script src="http://www.parsecdn.com/js/parse-1.3.0.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="css/dashboard.css" media="screen" />
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+    </head>
+    <body>
+        <header class="navbar navbar-fixed-top navbar-inverse">
+            <div class="navbar-inner">
+                <div class="container">
+                    <nav>
+                        <ul class="nav pull-left navbar-nav">
+                        <li><a href="homepage.html">Home</a></li>
+                        <li><a href="item_listing.html">Browse</a></li>
+                        <li><a href="login.html">Log In/Register</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                    </nav>
+                    <ul class="nav pull-right navbar-nav">
+                        <li><a href="#">Log Out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-3 col-md-2 sidebar">
+                        <ul class="nav nav-sidebar">
+                            <div class="profile-head">
+                                <img src="test.jpeg" class="profilepic"></img>
+                                <h2>Jim Smith</h2>
+                            </div>
+                        </ul>
+                        <ul class="nav nav-sidebar">
+                            <li><a href="redeem.html">Redeem your points</a></li>
+                            <li><a href="list_item.html">List an item here</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-1 main">
+                    <h1>Dashboard</h1>
+                    <h4> Welcome to UXChange! </h4>
+                    <hr>
+                    <h2>Sustainability Points: 132 | Level 1</h2>
+                    <a class="twitter_link" href="http://twitter.com/intent/tweet?text=132+sustainable+points%21+%23daemondash+%23bst&url=undefined" target="_blank">Tweet me!</a><br>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=file:///Users/davidzhu/Desktop/Daemon%2520Dash/uxchange/uxchange/homepage.html">Share on Facebook</a>
+                    <div class="row">
+                        <div class="posts col-xs-6">
+                            <h3>
+                                Things you want people to have. 
+                            </h3>
+                            <ul class="list-group">
+                                <li class="list-group-item"><a href="product_page_book.html">Biology Book</a></li>
+                                <li class="list-group-item"><a href="product_page_bike.html">Bike</a></li>
+                            </ul>
+                        </div>
+                        <div class="posts col-xs-6">
+                            <h3>
+                                Things people want from you.
+                            </h3>
+                            <ul class="list-group">
+                                <li class="list-group-item"><a href="product_page_book.html">Bike  
+                                    </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button value="Accept"> Accept</button> <button value="false"> Deny</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="your-alerts">
+                        <h3> Alerts </h3>
+                        <h5> You'll get an email every time one of these keywords is listed. </h5>
+                        <br> 
+                        <p><a class="btn btn-danger" onclick="deleteThisAlert()">Delete</a> Painting</p>
+                        <p><a class="btn btn-danger" onclick="deleteThisAlert()">Delete</a> Dress</p>
+                        <br>
+                        <button class="btn btn-default" onclick="addNewAlert()">Add new keyword</button> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div> 
+    </body>
+</html>

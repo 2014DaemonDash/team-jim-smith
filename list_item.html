@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="description" content="My Parse App">
+        <meta name="viewport" content="width=device-width">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.3.0.min.js"></script>
+        <script src="http://www.parsecdn.com/js/parse-1.3.0.min.js"></script>
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/bootstrap-responsive.css">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <head>
+    <body>
+        <header class="navbar navbar-fixed-top navbar-inverse">
+            <div class="navbar-inner">
+                <div class="container">
+                    <nav>
+                        <ul class="nav pull-left navbar-nav">
+                        <li><a href="homepage.html">Home</a></li>
+                        <li><a href="item_listing.html">Browse</a></li>
+                        <li><a href="login.html">Log In/Register</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                    </nav>
+                    <ul class="nav pull-right navbar-nav">
+                        <li><a href="#">Log Out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+        <h1 class="text-center">List a New Item</h1>
+        <hr>
+        <div class="list-container">
+            <input type="text" class="form-control new-list-item" placeholder="What's my name?">
+            <input type="text" class="form-control new-list-item" placeholder="Tag me! Ex: couch, chair, painting">
+            <input type="text" class="form-control new-list-item" placeholder="Give me a price tag! Ex: Free or 10">
+            <input type="text" class="form-control new-list-item" placeholder="Describe me! Please be specific.">
+            <input type="text" class="form-control new-list-item" placeholder="Where am I?">
+            <div class="dropdown new-list-item left">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">What Am I?<span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu new-list-item" role="menu" aria-labelledby="dropdownMenu1">
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Furniture</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Electronics</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Book</a></li>
+                    <li role="presentation" class="divider"></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Other</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="picture-container">
+        <div class="new-list-item">
+        <h3> Upload a Picture! </h3>
+        <input type="file" name="uploadField">
+        <div>
+            <br> 
+            <button class="btn btn-default btn-large" 
+                onclick="listItem()">List your item! </button>
+        </div>
+        <script type="text/javascript">
+            function listItem(){ 
+                Parse.initialize("7ed8UwWSx1SSwEETfJa9XE0cA7mB1vksWcP17o3o", "cez0e6Jn1HanH1WkvQV4uOb36biEiGo9jRlwWQhM");
+                var Item = Parse.Object.extend("Item"); 
+                var item = new Item(); 
+            
+                item.set("category", "Furniture"); 
+                item.set("tag", "kitchen"); 
+                item.set("photo", "photo.png"); 
+                item.set("description", "soft cordouroy fabric"); 
+                item.set("location", "on campus"); 
+                item.set("pricing", "12.00")
+            
+                item.save(null, {
+                  success: function(item) {
+                    // Hooray! Let them use the app now.
+                },
+                  error: function(item, error) {
+                  // Show the error message somewhere and let the user try again.
+                  alert("Error: " + error.code + " " + error.message);
+                }
+                });
+            
+                alert("Your item has been posted! You get +4 points!"); 
+                window.location.href = "item_listing.html"
+            }
+        </script>
+    </body>
+</html>

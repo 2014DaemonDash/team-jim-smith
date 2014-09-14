@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <header class="navbar navbar-fixed-top navbar-inverse">
+            <div class="navbar-inner">
+                <div class="container">
+                    <nav>
+                        <ul class="nav pull-left navbar-nav">
+                        <li><a href="homepage.html">Home</a></li>
+                        <li><a href="item_listing.html">Browse</a></li>
+                        <li><a href="login.html">Log In/Register</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                    </nav>
+                    <ul class="nav pull-right navbar-nav">
+                        <li><a href="#">Log Out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div class="logo-banner">
+            <img id="logo" src="logo.png">
+        </div>
+        <div class="container button-list">
+            <br> 
+            <h1>What are you looking for?</h1>
+            <hr>
+            <br> 
+            <div class="panel-container">
+                <div class="home-container">
+                    <a class="home left" href = "furniture.html"> Furniture </a><br><br> 
+                    <img class="icon" src="sofa.png">
+                </div>
+                <div class="home-container">
+                    <a class="home"href = "electronics.html"> Electronics </a><br><br> 
+                    <img class="icon" src="computer.png">
+                </div>
+                <div class="home-container">
+                    <a class="home left"href = "books.html"> Books</a><br>
+                    <img class="icon" src="book.png">
+                </div>
+                <div class="home-container">
+                    <a class="home"href = "other.html"> Something Else </a><br> 
+                    <img class="icon" src="other.png">
+                </div>
+            </div>
+            <button class="home btn btn-default" onclick="goTo()">Browse All </button>
+            <script type="text/javascript">
+                function goTo() { 
+                    window.location = "item_listing.html"; 
+                }
+            </script>
+        </div>
+    </body>
+</html>

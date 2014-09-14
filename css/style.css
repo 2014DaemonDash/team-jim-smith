@@ -1,0 +1,174 @@
+/* Custom CSS Styling */
+
+p, h1, h2, h3, h4, h5, h6, a, button, form, input {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; 
+
+}
+
+
+body {
+	padding-top: 70px;
+	padding-bottom: 40px;
+}
+
+.profile-head {
+	padding-left: 20px;
+}
+
+.profilepic {
+	height: 160px;
+	width: 160px;
+
+
+	border: white 2px solid;
+	box-shadow: 0 0 10px #888;
+	-moz-box-shadow: 0 0 10px #888888;
+	-webkit-box-shadow: 0 0 10px #888;
+	margin-left: 5px!important;
+}
+
+.logo-banner {
+
+	background: rgb(195,195,195);
+	margin-top: -35px;
+	padding-top: 70px;
+	padding-bottom: 70px;
+
+	height: 100%;
+
+}
+
+#logo{
+	display: block;
+	margin: auto;
+}
+
+.button-list {
+	text-align: center;
+
+
+}
+
+a.home {
+	display: block;
+	font-size: 150%;
+}
+
+.home-container{
+	float:left;
+	width: 25%;
+	height: 200px;
+}
+
+
+
+.panel-container{
+	//width: 50%;
+
+}
+
+a {
+	color: black;
+	
+}
+a:hover {
+	text-decoration: none;
+	color: green;
+}
+
+.icon {
+
+}
+
+
+.list-container {
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+
+
+.new-list-item {
+	
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.picture-container {
+
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.left {
+
+}
+.text-center {
+	text-align: center;
+}
+
+.awards-container {
+	border-style: solid;
+	border-color: gray;
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+	box-shadow: 5px 5px 5px #888888;
+
+	width: 50%;
+	clear: both;
+}
+
+.award-image {
+	float: left;
+	width: 25%;
+	height: 100%;
+	padding: 10px;
+
+
+}
+
+.awards-content {
+	padding: 10px;
+	float: right;
+	width: 75%;
+
+}
+
+.barcode-container {
+
+}
+
+.clearfix:before,
+.clearfix:after {
+ content: "";
+ display: table;
+}
+.clearfix:after {
+ clear: both;
+}
+
+
+.posts {
+
+	height: 250px;
+}
+
+.login-form {
+	width: 20%;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+input.login {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+/* this centers the list_item buttons...
+but centers other things as well */
+/*div{
+	text-align:center;
+}*/
